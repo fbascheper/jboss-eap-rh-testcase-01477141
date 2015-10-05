@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://java.sun.com/xml/ns/javaee"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/beans_1_0.xsd">
+    <!-- Not needed with CDI 1.1+ and DeltaSpike v1.1.1+ -->
+    <interceptors>
+        <class>org.apache.deltaspike.security.impl.extension.SecurityInterceptor</class>
+
+        <!-- Interceptors that allow the use of the @NavigationParameter and @NavigationParameter.List on action methods as documenten here: -->
+        <!-- https://deltaspike.apache.org/documentation/jsf.html#NavigationParameters -->
+        <class>org.apache.deltaspike.jsf.impl.config.view.navigation.NavigationParameterInterceptor</class>
+        <class>org.apache.deltaspike.jsf.impl.config.view.navigation.NavigationParameterListInterceptor</class>
+    </interceptors>
+</beans>
